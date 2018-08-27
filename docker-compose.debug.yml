@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   ubuntu18-moodle-nginx-php7:
-    image: ubuntu18-moodle-nginx-php7
+    image: ubuntu18-moodle-apache-php7
     build:
       context: .
       dockerfile: Dockerfile

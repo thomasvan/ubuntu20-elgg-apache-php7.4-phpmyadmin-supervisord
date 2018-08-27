@@ -100,6 +100,6 @@ moodle@c9786d14b245:~/files/html$
 
 ___
 
-_If anyone has suggestions please leave a comment on [this GitHub issue](https://github.com/thomasvan/ubuntu18-moodle-apache-php7/issues/2)._
+_If anyone has suggestions please leave a comment on [this GitHub issue](https://github.com/thomasvagon/ubuntu18-moodle-apache-php7/issues/2)._
 
 _Requests? Just make a comment on [this GitHub issue](https://github.com/thomasvan/ubuntu18-moodle-apache-php7/issues/1) if there's anything you'd like added or changed._
