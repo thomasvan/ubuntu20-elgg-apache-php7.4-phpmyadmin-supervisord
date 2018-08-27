@@ -10,12 +10,12 @@
 
 ```bash
 moodle@c9786d14b245:~/files/html$ sudo supervisorctl
-BroswerBased-SSH                 RUNNING   pid 18, uptime 1:30:39
-Cron                             RUNNING   pid 20, uptime 1:30:39
-MySQL                            RUNNING   pid 14, uptime 1:30:39
-APACHE                            RUNNING   pid 15, uptime 1:30:39
-PHP-FPM                          RUNNING   pid 13, uptime 1:30:39
-System-Log                       RUNNING   pid 19, uptime 1:30:39
+Apache2                          RUNNING   pid 13, uptime 0:57:02
+BroswerBased-SSH                 RUNNING   pid 14, uptime 0:57:02
+Cron                             RUNNING   pid 15, uptime 0:57:02
+MySQL                            RUNNING   pid 12, uptime 0:57:02
+PHP-FPM                          RUNNING   pid 11, uptime 0:57:02
+System-Log                       RUNNING   pid 16, uptime 0:57:02
 ```
 
 ___
