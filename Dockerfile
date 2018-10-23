@@ -17,7 +17,7 @@ RUN apt-get update && apt-get -y upgrade && \
 
 
 # Basic Requirements
-RUN apt-get -y install python-setuptools curl git nano sudo unzip openssh-server openssl shellinabox
+RUN apt-get -y install python-setuptools curl git nano sudo unzip openssh-server openssl
 RUN apt-get -y install mysql-server php7.0-fpm
 
 # Moodle Requirements
@@ -86,7 +86,6 @@ RUN crontab -u moodle /tmp/moodle.cron && \
 #NETWORK PORTS
 # private expose
 EXPOSE 9011
-EXPOSE 4200
 EXPOSE 3306
 
 # volume for mysql database and moodle install

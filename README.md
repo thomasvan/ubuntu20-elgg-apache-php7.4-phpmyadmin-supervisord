@@ -1,6 +1,5 @@
 # Run the latest Moodle on Ubuntu 18.04.1 LTS, includes
 
-- Shell In A Box – A Web-Based SSH Terminal - version 2.x
 - apache version: Apache/2.4.x
 - php-fpm 7.0.x
 - mysql version 5.7.x
@@ -11,7 +10,6 @@
 ```bash
 moodle@c9786d14b245:~/files/html$ sudo supervisorctl
 Apache2                          RUNNING   pid 13, uptime 0:57:02
-BroswerBased-SSH                 RUNNING   pid 14, uptime 0:57:02
 Cron                             RUNNING   pid 15, uptime 0:57:02
 MySQL                            RUNNING   pid 12, uptime 0:57:02
 PHP-FPM                          RUNNING   pid 11, uptime 0:57:02
@@ -23,8 +21,6 @@ ___
 ## Usage
 
 Services and ports exposed
-
-- Shell In A Box – A Web-Based SSH Terminal - http://<container_ip>:4200
 - MySQL - <container_ip>:3306
 - phpMyAdmin - http://<container_ip>/phpmyadmin
 - Apache and php-fpm 7.0.x - http://<container_ip> and https://<container_ip> for web browsing
@@ -32,7 +28,7 @@ Services and ports exposed
 ### Sample container initialization
 
 ```bash
-$ docker run -v <your-webapp-root-directory>:/home/moodle/files -p 4222:4200 -p 9022:9011 --name docker-name -d thomasvan/ubuntu18-moodle-apache-php7-mysql-phpmyadmin-supervisord:latest
+$ docker run -v <your-webapp-root-directory>:/home/moodle/files -p 9022:9011 --name docker-name -d thomasvan/ubuntu18-moodle-apache-php7-mysql-phpmyadmin-supervisord:latest
 ```
 
 ___
@@ -44,12 +40,10 @@ After starting the container ubuntu18-moodle-apache-php7-mysql-phpmyadmin-compos
 ```bash
 $ docker ps
 
-0.0.0.0:9011->9022/tcp, 0.0.0.0:4022->4200/tcp
+0.0.0.0:9011->9022/tcp
 ```
 
 ___
-
-You can then visit the following URL in a browser on your host machine to get started(account: moodle/moodle): `http://127.0.0.1:2222`
 
 You can start/stop/restart and view the error logs of apache and php-fpm services: `http://127.0.0.1:9022`
 
@@ -59,8 +53,6 @@ _For Windows 10, you need to [add route: route add 172.17.0.0 MASK 255.255.0.0 1
 
 - Looking into the output of `docker logs <container-id>`:
 - Using [docker inspect](https://docs.docker.com/engine/reference/commandline/inspect/parent-command) command
-
-- Checking the ~/readme.txt file by using [Web-Based SSH Terminal](http://127.0.0.1:2222)
 
 ___
 
