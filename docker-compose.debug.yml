@@ -1,10 +1,10 @@
-version: '2.1'
+version: "2.1"
 
 services:
-  ubuntu18-moodle-nginx-php7:
-    image: ubuntu18-moodle-apache-php7
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - 3000:3000
+    ubuntu20-elgg-apache-php7.4-phpmyadmin-supervisord:
+        image: ubuntu20-elgg-apache-php7.4-phpmyadmin-supervisord
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - 3000:3000
